@@ -2,7 +2,7 @@
 
 .product_list_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 350px));
     justify-content: center;
 
     gap: 40px;
@@ -11,14 +11,26 @@
 .product {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
     border: 1px solid #2d2d2d;
 
     padding: 10px;
 }
 
+.product div:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.product div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 .product a {
-    margin-left: 100px;
 
     text-transform: uppercase;
     text-decoration: none;
@@ -29,7 +41,58 @@
     padding: 5px 10px 5px 10px;
 }
 
+
+
 .product a:hover {
     text-decoration: underline;
+}
+
+.product:hover img {
+    scale: 1.02;
+
+    transition: 0.5s;
+}
+
+/* -------------------- tilbud og udsolgt --------------- */
+
+.product.onsale .discounted {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.discounted p:last-child {
+    border: 1px solid #2d2d2d;
+
+    padding: 5px;
+}
+
+.product .price span,
+.product .discounted {
+    display: none;
+}
+
+.product.onsale .price span {
+    display: initial;
+}
+
+.product.soldout::before {
+    content: "Out Of Stock";
+    position: absolute;
+
+    background-color: #2d2d2d;
+    color: whitesmoke;
+
+    padding: 10px;
+}
+
+.product.soldout img {
+    opacity: 0.5;
+}
+
+.product.soldout h3,
+.product.soldout p {
+    color: #737373;
 }
 
