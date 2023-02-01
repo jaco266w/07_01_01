@@ -8,9 +8,15 @@
     src: url(Glegoo-Regular.ttf);
 }
 
+@font-face {
+    font-family: frederick;
+    src: url(FrederickatheGreat-Regular.ttf);
+}
+
 html {
     --font-family-heading: glegoo-bold;
     --font-family-text: glegoo-regular;
+    --font-family-banner: dico-typewriter;
 
 }
 
@@ -38,7 +44,34 @@ img {
   display: block;
 }
 
+/* ----------------- Margins ---------------------- */
+.main_margin {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 /* ----------------- Skrifter -------------------- */
+
+h1 {
+    font-family: var(--font-family-banner);
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    color: whitesmoke;
+}
+
+h2 {
+    font-family: var(--font-family-heading);
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    color: #2d2d2d;
+}
+
+h3 {
+    font-family: var(--font-family-heading);
+    font-size: 1.2rem;
+}
 
 p {
     font-family: var(--font-family-text);
@@ -46,6 +79,8 @@ p {
 
 a {
     transition: 0.5s;
+
+    font-family: var(--font-family-text);
 }
 
 a:hover {
@@ -60,7 +95,7 @@ a:hover {
 header {
     background-color: black;
 
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 header ul {
@@ -87,5 +122,22 @@ header li a {
     font-size: 1rem;
     color: whitesmoke;
     text-decoration: none;
+}
+
+hr {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* ----------------- Banner --------------- */
+
+.banner {
+    background-image: url(/img/banner.webp);
+
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    padding-left: 20px;
 }
 

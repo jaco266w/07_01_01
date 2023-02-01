@@ -1,0 +1,35 @@
+/* ------------------ Product list ------------- */
+
+.product_list_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+    justify-content: center;
+
+    gap: 40px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #2d2d2d;
+
+    padding: 10px;
+}
+
+.product a {
+    margin-left: 100px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    color: whitesmoke;
+    text-align: center;
+
+    background-color: #2d2d2d;
+    padding: 5px 10px 5px 10px;
+}
+
+.product a:hover {
+    text-decoration: underline;
+}
+
