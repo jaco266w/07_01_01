@@ -191,5 +191,45 @@
     margin-bottom: 10px;
 }
 
+/* --------------------- categories ----------------- */
+
+.category_list {
+    display: grid;
+    justify-content: center;
+
+    grid-template-columns: repeat(auto-fill, minmax(150px, 400px));
+    gap: 40px;
+}
+
+.category_list div {
+    border-right: 1px solid #2d2d2d;
+    border-bottom: 1px solid #2d2d2d;
+
+    box-shadow: 5px 5px 10px #2d2d2d40;
+
+    padding: 10px;
+}
+
+.category_list div:hover {
+    scale: 1.02;
+
+    transition: 0.5s;
+}
+
+.category_list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    height: 100px;
+
+
+    background-image: url(/img/banner.webp);
+    border: 1px solid #2d2d2d;
+
+    color: whitesmoke;
+}
+
 
 
