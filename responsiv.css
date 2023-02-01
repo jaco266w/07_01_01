@@ -1,0 +1,47 @@
+@media (min-width: 1000px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .main_margin{
+        max-width: 1500px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .banner {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        padding-left: 70px;
+    }
+
+    .big_product {
+        flex-direction: row;
+        align-items: center;
+        column-gap: 30px;
+
+        padding: 20px;
+    }
+
+    .big_product img {
+        max-width: 500px;
+    }
+
+    .big_product h2 {
+        font-size: 2rem;
+    }
+
+    .second_margin{
+        max-width: 1100px;
+    }
+
+    .back {
+        font-size: 1.2rem;
+        margin-left: 70px;
+    }
+
+    .big_product button {
+        padding: 5px 40px 5px 40px;
+    }
+}

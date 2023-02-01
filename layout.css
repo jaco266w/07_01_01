@@ -2,7 +2,7 @@
 
 .product_list_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 350px));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
     justify-content: center;
 
     gap: 40px;
@@ -95,4 +95,101 @@
 .product.soldout p {
     color: #737373;
 }
+
+/* ---------------------- Produkt side -------------------- */
+.big_product {
+    display: flex;
+    flex-direction: column;
+
+   border-right: 1px solid #2d2d2d;
+   border-bottom: 1px solid #2d2d2d;
+}
+
+.big_product h2 {
+    font-family: var(--font-family-banner);
+    font-size: 1.2rem;
+}
+
+.big_product h3 {
+    font-size: 1rem;
+
+    margin-top: 30px;
+}
+
+.big_product dl {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 70px;
+}
+
+.big_product dt {
+    font-family: var(--font-family-text);
+    font-weight: 600;
+}
+
+.big_product dd {
+    font-family: var(--font-family-text);
+    
+    margin-bottom: 20px;
+}
+
+.big_product form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.big_product form label {
+    font-family: var(--font-family-text);
+    margin-bottom: 30px;
+}
+
+.big_product select {
+    font-family: var(--font-family-text);
+    color: #2d2d2d;
+
+    border: 1px solid #2d2d2d;
+    background-color: white;
+
+    padding: 5px 10px 5px 10px;
+
+    margin-left: 20px;
+}
+
+.big_product button {
+    font-family: var(--font-family-text);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: whitesmoke;
+
+    background-color: #2d2d2d;
+    border: none;
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.big_product hr {
+    margin-bottom: 20px;
+}
+
+
+
+.big_product .price span,
+.big_product .discounted {
+    display: none;
+}
+
+.big_product.onsale .price span {
+    display: initial;
+}
+
+.big_product.onsale .discounted {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+
 
