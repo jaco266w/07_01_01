@@ -16,21 +16,18 @@ async function getProduct(url) {
 
 function vis(produkt) {
     const beholder = document.querySelector("#single_product");
-    const skabelon = document.querySelector("#min_skabelon");
-    const klon = skabelon.cloneNode(true).content;
+    const singleProduct = document.querySelector("#single_product");
 
-    klon.querySelector("h2").textContent = produkt.productdisplayname;
-    klon.querySelector(".price").textContent = produkt.price + ",-" + "DKK";
-    klon.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${id}.webp`;
-    klon.querySelector("img").alt = produkt.productdisplayname;
-    klon.querySelector(".material").innerHTML = produkt.materialcaredesc;
-    klon.querySelector(".color").textContent = produkt.basecolour;
-    klon.querySelector(".inv_nr").textContent = produkt.id;
+    singleProduct.querySelector("h2").textContent = produkt.productdisplayname;
+    singleProduct.querySelector(".price").textContent = produkt.price`",-"  "DKK"`;
+    singleProduct.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${id}.webp`;
+    singleProduct.querySelector("img").alt = produkt.productdisplayname;
+    singleProduct.querySelector(".material").innerHTML = produkt.materialcaredesc;
+    singleProduct.querySelector(".color").textContent = produkt.basecolour;
+    singleProduct.querySelector(".inv_nr").textContent = produkt.id;
 
-    klon.querySelector(".discounted .rabat").textContent = produkt.discount + "%";
-    klon.querySelector(".discounted .ny_pris").textContent = "Now" + Math.floor(produkt.price*(1-(produkt.discount/100))) + ",-" + "DKK";
-
-    beholder.appendChild(klon);
+    singleProduct.querySelector(".discounted .rabat").textContent = produkt.discount + "%";
+    singleProduct.querySelector(".discounted .ny_pris").textContent = "Now" + Math.floor(produkt.price*(1-(produkt.discount/100))) + ",-" + "DKK";
 }
 
 getProduct(url);

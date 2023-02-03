@@ -27,52 +27,51 @@
             <h1>Product</h1>
         </div>
         <button onclick="history.back()" class="back">&#8592;  Back</button>
-        <div id="single_product">
-        </div>
+            <article id="single_product" class="big_product main_margin second_margin onsale">
+                <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Sahara Team India Fanwear Round Neck Jersey">
+                <div>
+                    <h2>Sahara Team India Fanwear Round Neck Jersey</h2>
+                    <p class="price">
+                        <span class="test">Prev.</span>
+                        DKK 895,-
+                    </p>
+                    <div class="discounted">
+                        <p class="ny_pris">Now DKK 749,-</p>
+                        <p class="rabat">30%</p>
+                    </div>
+                    <h3>Product Information</h3>
+                    <dl>
+                        <div>
+                            <dt>Material:</dt>
+                            <dd class="material">Sahara Team India Fanwear Round Neck Jersey</dd>
+                        </div>
+                        <div>
+                            <dt>Color:</dt>
+                            <dd class="color">Blue</dd>
+                        </div>
+                        <div>
+                            <dt>Inventory number:</dt>
+                            <dd class="inv_nr">1163</dd>
+                        </div>
+                    </dl>
+                    <hr>
+                    <form>
+                        <label>
+                            Choose a size:
+                            <select name="size">
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                        </label>
+                        <button>Add To Bag</button>
+                    </form>
+                </div>
+            </article>
     </main>
     <template id="min_skabelon">
-        <article class="big_product main_margin second_margin onsale">
-            <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Sahara Team India Fanwear Round Neck Jersey">
-            <div>
-                <h2>Sahara Team India Fanwear Round Neck Jersey</h2>
-                <p class="price">
-                    <span class="test">Prev.</span>
-                    DKK 895,-
-                </p>
-                <div class="discounted">
-                    <p class="ny_pris">Now DKK 749,-</p>
-                    <p class="rabat">30%</p>
-                </div>
-                <h3>Product Information</h3>
-                <dl>
-                    <div>
-                        <dt>Material:</dt>
-                        <dd class="material">Sahara Team India Fanwear Round Neck Jersey</dd>
-                    </div>
-                    <div>
-                        <dt>Color:</dt>
-                        <dd class="color">Blue</dd>
-                    </div>
-                    <div>
-                        <dt>Inventory number:</dt>
-                        <dd class="inv_nr">1163</dd>
-                    </div>
-                </dl>
-                <hr>
-                <form>
-                    <label>
-                        Choose a size:
-                        <select name="size">
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                            <option>XL</option>
-                        </select>
-                    </label>
-                    <button>Add To Bag</button>
-                </form>
-            </div>
-        </article>
+        
     </template>
     <script src="produkt.js"></script>
 </body>
