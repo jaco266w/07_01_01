@@ -1,6 +1,6 @@
 console.log("Test af konsol");
 
-const id = 1528;
+const id = 1163;
 const url = `https://kea-alt-del.dk/t7/api/products/${id}`;
 // const url = 'https://kea-alt-del.dk/t7/api/products/1163';
 
@@ -23,7 +23,7 @@ function vis(produkt) {
     klon.querySelector(".price").textContent = produkt.price + ",-" + "DKK";
     klon.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${id}.webp`;
     klon.querySelector("img").alt = produkt.productdisplayname;
-    klon.querySelector(".gender").textContent = produkt.gender;
+    klon.querySelector(".material").innerHTML = produkt.materialcaredesc;
     klon.querySelector(".color").textContent = produkt.basecolour;
     klon.querySelector(".inv_nr").textContent = produkt.id;
 
