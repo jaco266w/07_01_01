@@ -27,31 +27,35 @@
             <h1>Product</h1>
         </div>
         <button onclick="history.back()" class="back">&#8592;  Back</button>
-        <div class="big_product main_margin second_margin">
+        <div id="single_product">
+        </div>
+    </main>
+    <template id="min_skabelon">
+        <article class="big_product main_margin second_margin onsale">
             <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Sahara Team India Fanwear Round Neck Jersey">
-            <section>
+            <div>
                 <h2>Sahara Team India Fanwear Round Neck Jersey</h2>
                 <p class="price">
-                    <span>Prev.</span>
+                    <span class="test">Prev.</span>
                     DKK 895,-
                 </p>
                 <div class="discounted">
-                    <p>Now DKK 749,-</p>
-                    <p>30%</p>
+                    <p class="ny_pris">Now DKK 749,-</p>
+                    <p class="rabat">30%</p>
                 </div>
                 <h3>Product Information</h3>
                 <dl>
                     <div>
-                        <dt>Model Name:</dt>
-                        <dd>Sahara Team India Fanwear Round Neck Jersey</dd>
+                        <dt>Gender:</dt>
+                        <dd class="gender">Sahara Team India Fanwear Round Neck Jersey</dd>
                     </div>
                     <div>
                         <dt>Color:</dt>
-                        <dd>Blue</dd>
+                        <dd class="color">Blue</dd>
                     </div>
                     <div>
                         <dt>Inventory number:</dt>
-                        <dd>1163</dd>
+                        <dd class="inv_nr">1163</dd>
                     </div>
                 </dl>
                 <hr>
@@ -67,9 +71,9 @@
                     </label>
                     <button>Add To Bag</button>
                 </form>
-            </section>
-        </div>
-    </main>
-    
+            </div>
+        </article>
+    </template>
+    <script src="script.js"></script>
 </body>
 </html>
