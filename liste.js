@@ -29,9 +29,12 @@ function vis(liste) {
         }
         if(produkt.discount) {
             klon.querySelector("article").classList.add("onsale");
+            
             klon.querySelector(".discounted .rabat").textContent = produkt.discount + "%";
-        klon.querySelector(".discounted .ny_pris").textContent = "Now" + Math.floor(produkt.price*(1-(produkt.discount/100))) + ",-" + "DKK";
+            klon.querySelector(".discounted .ny_pris").textContent = "Now" + Math.floor(produkt.price*(1-(produkt.discount/100))) + ",-" + "DKK";
         }
+        
+        
         beholder.appendChild(klon);
     });
 

@@ -19,15 +19,24 @@ function vis(produkt) {
     const singleProduct = document.querySelector("#single_product");
 
     singleProduct.querySelector("h2").textContent = produkt.productdisplayname;
-    singleProduct.querySelector(".price").textContent = produkt.price`",-"  "DKK"`;
+    singleProduct.querySelector(".price").textContent = "DKK" + produkt.price + ",-";
     singleProduct.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${id}.webp`;
     singleProduct.querySelector("img").alt = produkt.productdisplayname;
     singleProduct.querySelector(".material").innerHTML = produkt.materialcaredesc;
     singleProduct.querySelector(".color").textContent = produkt.basecolour;
     singleProduct.querySelector(".inv_nr").textContent = produkt.id;
 
-    singleProduct.querySelector(".discounted .rabat").textContent = produkt.discount + "%";
-    singleProduct.querySelector(".discounted .ny_pris").textContent = "Now" + Math.floor(produkt.price*(1-(produkt.discount/100))) + ",-" + "DKK";
+
+    if(produkt.soldout) {
+        document.querySelector("article").classList.add("soldout");
+    }
+    if(produkt.discount) {
+        singleProduct.classList.add("onsale");
+
+        singleProduct.querySelector(".discounted .rabat").textContent = produkt.discount + "%";
+        singleProduct.querySelector(".discounted .ny_pris").textContent = "Now" + Math.floor(produkt.price*(1-(produkt.discount/100))) + ",-" + "DKK";
+    }
+    
 }
 
 getProduct(url);
