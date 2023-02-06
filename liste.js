@@ -23,9 +23,15 @@ function vis(liste) {
         klon.querySelector("h3").textContent = produkt.productdisplayname;
         klon.querySelector(".price").textContent = produkt.price + ",-" + "DKK";
 
-        klon.querySelector(".discounted .rabat").textContent = produkt.discount + "%";
+        
+        if(produkt.soldout) {
+            klon.querySelector("article").classList.add("soldout");
+        }
+        if(produkt.discount) {
+            klon.querySelector("article").classList.add("onsale");
+            klon.querySelector(".discounted .rabat").textContent = produkt.discount + "%";
         klon.querySelector(".discounted .ny_pris").textContent = "Now" + Math.floor(produkt.price*(1-(produkt.discount/100))) + ",-" + "DKK";
-
+        }
         beholder.appendChild(klon);
     });
 
