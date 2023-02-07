@@ -1,19 +1,53 @@
 console.log("Test af konsol");
 
-const url = `https://kea-alt-del.dk/t7/api/products?limit=100`;
+let cat
+const cat1 = "?category="
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+console.log(category);
 
-async function getData(url) {
+
+if (category === "accessories") {
+    cat = cat1+category;
+}
+else if (category === "apparel") {
+    cat = cat1+category;
+}
+else if (category === "footwear") {
+    cat = cat1+category;
+}
+else if (category === "free items") {
+    cat = cat1+category;
+}
+else if (category === "personal care") {
+    cat = cat1+category;
+}
+else if (category === "sporting goods") {
+    cat = cat1+category;
+}
+else {
+    cat = "?limit=100";
+}
+
+const url = `https://kea-alt-del.dk/t7/api/products${cat}`;
+
+
+async function getData() {
+    console.log(cat);
+    console.log(url);
     const resultat = await fetch(url);
     const liste = await resultat.json();
 
     vis(liste);
 }
 
+
 function vis(liste) {
     console.log(liste);
 
     const beholder = document.querySelector("#product_list_grid");
     const skabelon = document.querySelector("#liste_skabelon").content;
+    document.querySelector("h1").textContent = category;
 
     liste.forEach(produkt => {
         const klon = skabelon.cloneNode(true);
@@ -22,6 +56,7 @@ function vis(liste) {
         klon.querySelector("img").alt = produkt.productdisplayname;
         klon.querySelector("h3").textContent = produkt.productdisplayname;
         klon.querySelector(".price").textContent = produkt.price + ",-" + "DKK";
+        klon.querySelector("a").href = `product.html?id=${produkt.id}`;
 
         
         if(produkt.soldout) {
@@ -40,4 +75,4 @@ function vis(liste) {
 
 }
 
-getData(url);
+getData();
